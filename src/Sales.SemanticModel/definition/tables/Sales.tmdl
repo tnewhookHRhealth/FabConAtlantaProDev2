@@ -75,6 +75,11 @@ table Sales
 		formatString: $ #,##0
 		lineageTag: 3e5cb67e-a411-476f-ad34-7ec10dfd084d
 
+
+	measure totalSales = SUM(Sales[Unit Cost]) 
+		formatString: $ #,##0
+		lineageTag: 3e5cb67e-a411-476f-ad34-7ec10dfd084d
+
 	measure 'Sales Qty (LY)' = CALCULATE([Sales Qty], SAMEPERIODLASTYEAR('Calendar'[Date]))
 		lineageTag: 019cddab-955e-72e4-afbd-612d555de377
 
