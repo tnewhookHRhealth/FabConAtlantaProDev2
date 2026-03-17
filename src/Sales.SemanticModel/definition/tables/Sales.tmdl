@@ -13,9 +13,7 @@ table Sales
 		formatString: $ #,##0
 		lineageTag: a8e95485-02a2-4525-b02a-b2418fbdbe4c
 
-	measure 'Sales Amount (LY)' = IF ([Sales Amount] > 0, CALCULATE([Sales Amount], SAMEPERIODLASTYEAR('Calendar'[Date])))
-		formatString: "€"#,0.###############;("€"#,0.###############);"€"#,0.###############
-		lineageTag: 3fa889ae-64b9-4a6e-b0e6-c81c90fd32bf
+
 
 	measure 'Sales Amount Avg per Day' = AVERAGEX(VALUES('Calendar'[Date]), [Sales Amount])
 		formatString: $ #,##0
